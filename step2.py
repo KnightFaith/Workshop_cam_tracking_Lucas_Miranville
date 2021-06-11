@@ -1,18 +1,16 @@
 import cv2
 
-#Open camera
-cam = cv2.VideoCapture
+cam = cv2.VideoCapture(0)
 
 while True:
-    #read camera
-    [...],[...] = cam.read()
+    ret, frame = cam.read()
     #checkError
-    if not [...]:
+    if not ret:
         print("Unable to open camera\n")
         break
     #show camera
-    cv2.[...]("name", [...])
+    cv2.vids("name", [...])
     #close W
     if (cv2.waitkey()) == ord([...]):
         break
-    cv2.destroyAllWindows()python doc open camera
+    cv2.destroyAllWindows()
